@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/ico.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AIX CHAIN</title>
+    <script type="text/javascript">
+      (function () {
+        var maxWidth = 424;
+        function setRem() {
+          var html = document.documentElement;
+          var width = html.clientWidth;
+          if (width > maxWidth) {
+            width = maxWidth;
+          }
+          var styles = document.documentElement.getAttribute("style") || "";
+          styles = styles.replace(/font-size\s*:\s*[^;]+;?/gi, "");
+          document.documentElement.setAttribute('style', 'font-size:' + width / 750 + 'px !important;'+ styles);
+        }
+        var timeout;
+        window.addEventListener('resize', function () {
+          clearTimeout(timeout);
+          timeout = setTimeout(setRem, 300);
+        });
+        document.addEventListener('DOMContentLoaded', setRem);
+      })();
+    </script>
+    <script>
+      (function () {
+        try {
+          var key = 'xai-theme'
+          var stored = localStorage.getItem(key)
+          var isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+          var theme = stored === 'system' || !stored ? (isDark ? 'dark' : 'light') : stored
+          document.documentElement.setAttribute('data-theme', theme)
+        } catch (e) {}
+      })()
+    </script>
+    <script>
+      (function loadEnv() {
+        const script = document.createElement('script')
+        script.src = `/env/env.js?t=${Date.now()}`
+        script.async = false // 保证顺序（很重要）
+        document.head.appendChild(script)
+      })()
+      window.addEventListener("beforeunload", (event) => {
+        event.preventDefault();
+        event.returnValue = "您确定要离开吗？未保存的更改将会丢失。";
+      });
+    </script>
+    <script type="module" crossorigin src="/assets/index-BFCVyMdh.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CGtqSUXk.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
