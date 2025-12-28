@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/ico.svg" />
+    <link rel="icon" type="image/svg+xml" href="./ico.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AIX CHAIN</title>
     <script type="text/javascript">
@@ -40,7 +40,7 @@
     <script>
       (function loadEnv() {
         const script = document.createElement('script')
-        script.src = `/env/env.js?t=${Date.now()}`
+        script.src = `./env/env.js?t=${Date.now()}`
         script.async = false // 保证顺序（很重要）
         document.head.appendChild(script)
       })()
@@ -49,8 +49,8 @@
         event.returnValue = "您确定要离开吗？未保存的更改将会丢失。";
       });
     </script>
-    <script type="module" crossorigin src="/assets/index-BFCVyMdh.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CGtqSUXk.css">
+    <script type="module" crossorigin src="./assets/index-BFCVyMdh.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CGtqSUXk.css">
   </head>
   <body>
     <div id="root"></div>
