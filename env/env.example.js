@@ -1,3 +1,3 @@
 window.$xai = {
-    apiBaseUrl: 'https://familiar-decrease-motherboard-not.trycloudflare.com',
+    apiBaseUrl: 'https://united-monthly-globe-bull.trycloudflare.com',
 }
